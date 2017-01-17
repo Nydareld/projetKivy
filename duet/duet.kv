@@ -1,0 +1,52 @@
+<MenuScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            BoxLayout:
+            BoxLayout:
+                Label:
+                    text: "Duet"
+            BoxLayout:
+        BoxLayout:
+            BoxLayout:
+            BoxLayout:
+            BoxLayout:
+        BoxLayout:
+            Button:
+                text: 'Play'
+                on_press: root.manager.current = 'game'
+            Button:
+                text: 'Settings'
+                on_press: root.manager.current = 'settings'
+            Button:
+                text: "Exit"
+                on_press: app.stop()
+
+<SettingsScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            BoxLayout:
+            BoxLayout:
+                Label:
+                    text: "Settings"
+            BoxLayout:
+        BoxLayout:
+            BoxLayout:
+            BoxLayout:
+            BoxLayout:
+        BoxLayout:
+            BoxLayout:
+            BoxLayout:
+                Button:
+                    text: 'Button'
+                Button:
+                    text: 'Menu'
+                    on_press: root.manager.current = 'menu'
+            BoxLayout:
+
+
+<GameScreen>:
+    BoxLayout:
+        Label:
+            text: 'Game !'
