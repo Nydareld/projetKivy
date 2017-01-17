@@ -26,11 +26,11 @@ Installation de virtualenv
 
 Création de l'environement
 
-    virtualenv -p python2 venvProjetKivy
+    virtualenv -p python2 ../venvProjetKivy
 
 Activation de l'environement
 
-    source venvProjetKivy/bin/activate
+    source ../venvProjetKivy/bin/activate
 
 Installation des dépendcences
 
