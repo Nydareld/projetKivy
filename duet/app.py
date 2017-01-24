@@ -4,7 +4,6 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from .menu import MenuScreen
 from .settings import SettingsScreen
-from .game import GameScreen
 
 
 class DuetApp(App):
@@ -15,7 +14,7 @@ class DuetApp(App):
     def build(self):
         sm = ScreenManager()
         sm.add_widget(MenuScreen(name='menu'))
-        sm.add_widget(GameScreen(name='game'))
+        sm.add_widget(Game(name='game'))
         sm.add_widget(SettingsScreen(name='settings'))
         sm.current = 'menu'
         return sm
