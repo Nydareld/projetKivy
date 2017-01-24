@@ -14,7 +14,7 @@
         BoxLayout:
             Button:
                 text: 'Play'
-                on_press: root.manager.current = 'game'
+                on_press: root.manager.current = 'level'
             Button:
                 text: 'Settings'
                 on_press: root.manager.current = 'settings'
@@ -45,6 +45,49 @@
                     on_press: root.manager.current = 'menu'
             BoxLayout:
 
+<LevelScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            BoxLayout:
+            BoxLayout:
+                Label:
+                    text: "Level choice"
+            BoxLayout:
+        BoxLayout:
+            BoxLayout:
+            GridLayout:
+                cols: 3
+                rows: 3
+                Button:
+                    text: 'I'
+                    on_press: root.manager.current = 'game'
+                Button:
+                    text: 'II'
+                    on_press: root.manager.current = 'game'
+                Button:
+                    text: 'III'
+                    on_press: root.manager.current = 'game'
+                Button:
+                    text: 'IV'
+                    on_press: root.manager.current = 'game'
+                Button:
+                    text: 'V'
+                    on_press: root.manager.current = 'game'
+                Button:
+                    text: 'VI'
+                    on_press: root.manager.current = 'game'
+                Button:
+                    text: 'VII'
+                    on_press: root.manager.current = 'game'
+                Button:
+                    text: 'VIII'
+                    on_press: root.manager.current = 'game'
+                Button:
+                    text: 'IX'
+                    on_press: root.manager.current = 'game'
+            BoxLayout:
+        BoxLayout:
 
 <GameScreen>:
     BoxLayout:
