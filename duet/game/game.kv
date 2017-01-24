@@ -1,3 +1,19 @@
 <Board>:
 
 <Bloc>:
+
+<Tile>:
+    x: self.board.x + self.col*self.board.tsize + self.board.tx
+    y: self.board.y + self.row*self.board.tsize + self.board.ty
+
+    canvas:
+        Color:
+            rgba: 0,0,0,1
+        Rectangle:
+            pos: root.pos
+            size: (root.board.tsize, root.board.tsize)
+        Color:
+            rgba: root.rgba
+        Rectangle:
+            pos: (root.pos[0]+root.board.tmargin,root.pos[1]+root.board.tmargin)
+            size: (root.board.tsize-2*root.board.tmargin, root.board.tsize-2*root.board.tmargin)
