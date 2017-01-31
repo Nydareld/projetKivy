@@ -1,3 +1,31 @@
+<PlayerMenu>:
+    canvas.before:
+        PushMatrix
+        Rotate:
+            axis: 0,0,1
+            angle: root.angle
+            origin: 400,350
+    canvas.after:
+        PopMatrix
+    BoxLayout:
+        canvas:
+            Color:
+                rgba: 1,1,1,1
+            Line:
+                circle: 400, 350, root.taille_blanc
+            Color:
+                rgba: 1,0.5,0.5,1
+            Ellipse:
+                pos: 285, 335
+                size: root.taille_dots, root.taille_dots
+            Color:
+                rgba: 0.5,0.5,1,1
+            Ellipse:
+                pos: 485, 335
+                size: root.taille_dots, root.taille_dots
+
+
+
 <MenuScreen>:
     BoxLayout:
         orientation: "vertical"
@@ -10,6 +38,7 @@
         BoxLayout:
             BoxLayout:
             BoxLayout:
+                PlayerMenu
             BoxLayout:
         BoxLayout:
             Button:
@@ -21,6 +50,7 @@
             Button:
                 text: "Exit"
                 on_press: app.stop()
+
 
 <SettingsScreen>:
     BoxLayout:
@@ -50,6 +80,9 @@
         orientation: "vertical"
         BoxLayout:
             BoxLayout:
+                Button:
+                    text: 'Back'
+                    on_press: root.manager.current = 'menu'
             BoxLayout:
                 Label:
                     text: "Level choice"

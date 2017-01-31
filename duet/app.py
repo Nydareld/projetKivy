@@ -2,7 +2,7 @@ from kivy.app import App
 from game import Game
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
-from .menu import MenuScreen
+from .menu import MenuScreen, PlayerMenu
 from .settings import SettingsScreen
 from .level import LevelScreen
 
