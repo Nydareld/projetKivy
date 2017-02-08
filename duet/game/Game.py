@@ -29,11 +29,25 @@ class Game(Screen):
                 # 0--50<--->250--300<--->500--550<--->750--800
                 gauche = [50,300,550]
                 rand = randint(0, 2)
-                bloc = Bloc(i,gauche[rand],(200,30),self)
+                bloc = Bloc(i,gauche[rand],(200,30),[],self)
                 self.blocs.append(bloc)
         else :
             for blocData in levelData:
-                bloc = Bloc(blocData[0],blocData[1],blocData[2],self)
+                index = blocData[0]
+                yoffset = blocData[1]
+                size = None
+                if(len(blocData) > 2):
+                    size = blocData[2]
+                else:
+                    size = (200,30)
+
+                animations = None
+                if(len(blocData) > 3):
+                    animations = blocData[3]
+                else:
+                    animations = []
+
+                bloc = Bloc(blocData[0],blocData[1],blocData[2],animations,self)
                 self.blocs.append(bloc)
 
         for bloc in self.blocs:
