@@ -1,4 +1,5 @@
 from kivy.uix.screenmanager import Screen
+from kivy.animation import Animation
 
 class LevelScreen(Screen):
 
@@ -51,11 +52,18 @@ class LevelScreen(Screen):
             [11,50,(200,30)],
             [12,50,(200,30)],
             [13,325,(125,125)],
-            [14,550,(200,30)],
+            [14,550,(200,30)]
         ],
         #lvl 4
         [
-
+            [0,50,(200,30),["Rotation"]],
+            [1,325,(125,125),["Bounce"]],
+            [2,550,(200,30),["Slide20"]],
+            [4,325,(125,125),["Bounce","Rotation","Slide20"]],
+            [7,300,(200,30),["Slide20"]],
+            [8,300,(200,30),["Slide50"]],
+            [9,300,(200,30),["Slide100"]],
+            [10,300,(200,30),["Slide"]]
         ],
         #lvl 5
         [
