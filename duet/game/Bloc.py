@@ -22,16 +22,11 @@ class Bloc(Widget):
         self.size_hint = None, None
         super(Bloc, self).__init__()
         self.game.add_widget(self)
-        print('position : '+str(position))
-        print('positionLaterale : '+str(positionLaterale))
-        
+        self.anim = Animation(y=-1000000,duration=3000)
+
     def move(self):
-        self.pos = Vector(*self.velocity) + self.pos
+        self.anim.start(self)
 
     def on_touch_down(self, touch):
         if self.collide_point(touch.x, touch.y):
-            print('position : '+str(self.position))
-            print('positionLaterale : '+str(self.positionLaterale))
-            print('width : '+str(self.width))
-            print('height : '+str(self.height))
             return True
