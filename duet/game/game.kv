@@ -8,6 +8,15 @@
     y: self.position*self.game.offset+self.game.startx
     x: self.positionLaterale
 
+    canvas.before:
+        PushMatrix
+        Rotate:
+            axis: 0,0,1
+            angle: root.angle
+            origin: root.pos[0]+root.size[0]/2,root.pos[1]+root.size[1]/2
+    canvas.after:
+        PopMatrix
+
     canvas:
         Color:
             rgba: root.rgba
