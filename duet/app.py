@@ -14,10 +14,10 @@ class DuetApp(App):
         return True
 
     def build(self):
-        sm = ScreenManager()
-        sm.add_widget(MenuScreen(name='menu'))
-        sm.add_widget(Game(name='game'))
-        sm.add_widget(LevelScreen(name='level'))
-        sm.add_widget(SettingsScreen(name='settings'))
-        sm.current = 'menu'
-        return sm
+        self.sm = ScreenManager()
+        self.sm.add_widget(MenuScreen(name='menu'))
+        self.sm.add_widget(Game(name='game'))
+        self.sm.add_widget(LevelScreen(name='level'))
+        self.sm.add_widget(SettingsScreen(name='settings'))
+        self.sm.current = 'menu'
+        return self.sm
